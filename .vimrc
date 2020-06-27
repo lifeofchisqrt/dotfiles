@@ -3,11 +3,10 @@ set nocompatible
 " turn on syntax highlighting
 syntax on
 " recognize plugins
-filetype plugin on
+filetype plugin indent on
 " onmicompletion - autocomplete
 set omnifunc=syntaxcomplete#Complete
 colorscheme nord
-filetype indent on
 " display linenumbers as relativenumber to current line
 set relativenumber
 set number
@@ -40,6 +39,12 @@ set expandtab
 set smartindent
 set smartcase
 let python_highlight_all = 1
+" remove swapfiles, create undo directory
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
 
 " Statusline
 set laststatus=2
